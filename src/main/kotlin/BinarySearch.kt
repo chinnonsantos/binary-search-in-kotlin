@@ -36,4 +36,13 @@ class BinarySearch(
             else -> UNSUCCESSFUL_SEARCH
         }
     }
+
+    fun byDivideAndConquerUsingNativeFunction(): Int {
+        if (sortedList.isEmpty()) {
+            println("-> empty list to search!")
+            return UNSUCCESSFUL_SEARCH
+        }
+
+        return sortedList.binarySearch(search)
+    }
 }

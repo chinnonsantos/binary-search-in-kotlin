@@ -15,14 +15,18 @@ fun main() {
     println("List size: ${sortedIntList.size}")
 
     println("\n### Linear Search - Brute Force Approach (ForEach loop) ###")
-    val howSlowIsBruteForce = measureNanoTime{ linearSearch.byBruteForceUsingForEachLoop() }
-    println("took ${howSlowIsBruteForce / 1000} microseconds to execute!")
+    val howSlowIsBruteForceForEach = measureNanoTime{ linearSearch.byBruteForceUsingForEachLoop() }
+    println("took ${howSlowIsBruteForceForEach / 1000} microseconds to execute!")
 
     println("\n### Linear Search - Brute Force Approach (For loop) ###")
     val howSlowIsBruteForceFor = measureNanoTime{ linearSearch.byBruteForceUsingForLoop() }
     println("took ${howSlowIsBruteForceFor / 1000} microseconds to execute!")
 
+    println("\n### Binary Search - Divide And Conquer Approach (Native function) ###")
+    val howSlowIsDivideAndConquerNative = measureNanoTime{ binarySearch.byDivideAndConquerUsingNativeFunction() }
+    println("took ${howSlowIsDivideAndConquerNative / 1000} microseconds to execute!")
+
     println("\n### Binary Search - Divide And Conquer Approach (Recursive loop) ###")
-    val howSlowIsDivideAndConquer = measureNanoTime{ binarySearch.byDivideAndConquerUsingRecursiveLoop() }
-    println("took ${howSlowIsDivideAndConquer / 1000} microseconds to execute!")
+    val howSlowIsDivideAndConquerRecursive = measureNanoTime{ binarySearch.byDivideAndConquerUsingRecursiveLoop() }
+    println("took ${howSlowIsDivideAndConquerRecursive / 1000} microseconds to execute!")
 }
