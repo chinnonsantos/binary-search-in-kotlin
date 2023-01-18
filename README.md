@@ -16,22 +16,22 @@
 
 ## Complexity Analysis
 
-A complexidade do algoritmo de **Busca binária** é da ordem de **`&Omicron;(log n)`**, em que **`n`** é o tamanho do 
-vetor de busca. Apresenta-se mais eficiente que a **Busca linear** cuja ordem é **`&Omicron;(n)`**.
+A complexidade do algoritmo de **Busca binária** é da ordem de **`O(log n)`**, em que **`n`** é o tamanho do 
+vetor de busca. Apresenta-se mais eficiente que a **Busca linear** cuja ordem é **`O(n)`**.
 
 ## Procedure
 
 Dado uma lista **&Alpha;** de **`n`** elementos com os valores **&Alpha;<sub>0</sub>, &Alpha;<sub>1</sub>, 
 &Alpha;<sub>2</sub>, ..., &Alpha;<sub>n-1</sub>** ordenada de tal modo que **&Alpha;<sub>0</sub> &le; 
 &Alpha;<sub>1</sub> &le; &Alpha;<sub>2</sub>  &le; ... &le; &Alpha;<sub>n-1</sub>**, e um valor para pesquisa 
-**`&Tau;`**, a seguinte rotina usa pesquisa binária para achar o índice de **`&Tau;`** em **&Alpha;**.
+**`&Tau;`**, a seguinte rotina usa pesquisa binária para achar o índice de **`T`** em **&Alpha;**.
 
 1. Defina **`L`** para `0` e **`R`** para `n - 1`.
-2. Se **`L &gt; R`** a pesquisa termina sem sucesso.
+2. Se **L &gt; R** a pesquisa termina sem sucesso.
 3. Defina **`m`**(o índice do meio da lista) para **`(L + R) / 2`** arredondado.
-4. Se **&Alpha;<sub>m</sub> &lt; &Tau;**, defina **`L`** para **`m + 1`** e volte ao segundo passo.
-5. Se **&Alpha;<sub>m</sub> &gt; &Tau;**, defina **`R`** para **`m - 1`** e volte ao segundo passo.
-6. Se **&Alpha;<sub>m</sub> = &Tau;**, a pesquisa está feita, o índice de **`&Tau;`** é **`m`**.
+4. Se **&Alpha;<sub>m</sub> &lt; T**, defina **`L`** para **`m + 1`** e volte ao segundo passo.
+5. Se **&Alpha;<sub>m</sub> &gt; T**, defina **`R`** para **`m - 1`** e volte ao segundo passo.
+6. Se **&Alpha;<sub>m</sub> = T**, a pesquisa está feita, o índice de **`T`** é **`m`**.
 
 > Para o algoritmo computacional ser mais eficiente, foi implementado uma validação de **Lista vazia**, evitando-se a 
 > execução de procedimentos desnecessários! 
