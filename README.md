@@ -24,7 +24,7 @@ vetor de busca. Apresenta-se mais eficiente que a **Busca linear** cuja ordem é
 Dado uma lista **&Alpha;** de **`n`** elementos com os valores **&Alpha;<sub>0</sub>, &Alpha;<sub>1</sub>, 
 &Alpha;<sub>2</sub>, ..., &Alpha;<sub>n-1</sub>** ordenada de tal modo que **&Alpha;<sub>0</sub> &le; 
 &Alpha;<sub>1</sub> &le; &Alpha;<sub>2</sub>  &le; ... &le; &Alpha;<sub>n-1</sub>**, e um valor para pesquisa 
-**`&Tau;`**, a seguinte rotina usa pesquisa binária para achar o índice de **`T`** em **&Alpha;**.
+**`T`**, a seguinte rotina usa pesquisa binária para achar o índice de **`T`** em **&Alpha;**.
 
 1. Defina **`L`** para `0` e **`R`** para `n - 1`.
 2. Se **L &gt; R** a pesquisa termina sem sucesso.
