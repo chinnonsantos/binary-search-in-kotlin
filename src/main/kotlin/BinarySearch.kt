@@ -4,34 +4,34 @@ class BinarySearch(
 ) {
     fun byDivideAndConquerUsingRecursiveLoop(
         interactions: Int = 1,
-        indexStart: Int = 0,
-        indexEnd: Int = sortedList.size - 1
+        indexLow: Int = 0,
+        indexHigh: Int = sortedList.size - 1
     ): Int {
-        val indexHalfSize: Int = (indexStart + indexEnd) / 2
-//        println("index half size: $indexHalfSize")
+        val indexMid: Int = (indexLow + indexHigh) / 2
+//        println("index middle: $indexMid")
 
         return when {
             sortedList.isEmpty() -> {
                 println("-> empty list to search!")
                 UNSUCCESSFUL_SEARCH
             }
-            indexStart > indexEnd -> {
+            indexLow > indexHigh -> {
                 println("-> value $search not found with $interactions interactions!")
                 UNSUCCESSFUL_SEARCH
             }
-            sortedList[indexHalfSize] == search -> {
-                println("-> value $search found in index $indexHalfSize with $interactions interactions!")
-                indexHalfSize
+            sortedList[indexMid] == search -> {
+                println("-> value $search found in index $indexMid with $interactions interactions!")
+                indexMid
             }
-            sortedList[indexHalfSize] < search -> byDivideAndConquerUsingRecursiveLoop(
+            sortedList[indexMid] < search -> byDivideAndConquerUsingRecursiveLoop(
                 interactions = interactions + 1,
-                indexStart = indexHalfSize + 1,
-                indexEnd = indexEnd
+                indexLow = indexMid + 1,
+                indexHigh = indexHigh
             )
-            sortedList[indexHalfSize] > search -> byDivideAndConquerUsingRecursiveLoop(
+            sortedList[indexMid] > search -> byDivideAndConquerUsingRecursiveLoop(
                 interactions = interactions + 1,
-                indexStart = indexStart,
-                indexEnd = indexHalfSize - 1
+                indexLow = indexLow,
+                indexHigh = indexMid - 1
             )
             else -> UNSUCCESSFUL_SEARCH
         }
